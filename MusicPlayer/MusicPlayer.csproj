@@ -1,0 +1,65 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="csharpicons\musicdefault.png" />
+    <None Remove="csharpicons\next.png" />
+    <None Remove="csharpicons\play.png" />
+    <None Remove="csharpicons\prev.png" />
+    <None Remove="csharpicons\random_false.png" />
+    <None Remove="csharpicons\random_true.png" />
+    <None Remove="csharpicons\repeat_false.png" />
+    <None Remove="csharpicons\repeat_true.png" />
+    <None Remove="left.png" />
+    <None Remove="plau.png" />
+    <None Remove="play.png" />
+    <None Remove="right.png" />
+    <None Remove="stop.png" />
+    <None Remove="stope.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="taglib-sharp-netstandard2.0" Version="2.1.0" />
+    <PackageReference Include="WindowsAPICodePack-Shell" Version="1.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="csharpicons\musicdefault.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="csharpicons\next.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="csharpicons\play.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="csharpicons\prev.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="csharpicons\random_false.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="csharpicons\random_true.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="csharpicons\repeat_false.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="csharpicons\repeat_true.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="left.png" />
+    <Resource Include="plau.png" />
+    <Resource Include="play.png" />
+    <Resource Include="right.png" />
+    <Resource Include="stop.png" />
+    <Resource Include="stope.png" />
+  </ItemGroup>
+
+</Project>

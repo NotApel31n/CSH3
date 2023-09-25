@@ -1,0 +1,51 @@
+﻿<Window x:Class="MusicPlayer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MusicPlayer"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="42*"/>
+            <RowDefinition Height="323*"/>
+            <RowDefinition Height="69*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="87*"/>
+            <ColumnDefinition Width="87*"/>
+            <ColumnDefinition Width="226*"/>
+        </Grid.ColumnDefinitions>
+        <ListBox x:Name="MusicList" Grid.Column="2" SelectionChanged="MusicList_SelectionChanged" Margin="0,42,0,0" Grid.RowSpan="2"/>
+        <MediaElement x:Name="media" LoadedBehavior="Manual" MediaOpened="media_MediaOpened" Margin="17,16,99,16" Grid.Row="2" Grid.Column="2"/>
+        <Slider x:Name="trackSlider" Grid.Row="1" Margin="30,0,30,12" ValueChanged="trackSlider_ValueChanged" Grid.ColumnSpan="2" Height="30" VerticalAlignment="Bottom"/>
+        <Button Grid.Column="2" Content="Выбрать музыку
+                " HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Center" Width="438" Height="27" Click="UploadMusic"/>
+        <TextBlock x:Name="trackPosition" Margin="0,0,0,49" Grid.Row="1" TextWrapping="Wrap" Text="00:00:00.000000" HorizontalAlignment="Center" Width="88" Height="16" VerticalAlignment="Bottom"/>
+        <TextBlock x:Name="trackMaximum" Margin="0,0,0,49" Grid.Row="1" TextWrapping="Wrap" Text="00:00:00.000000" Grid.Column="1" HorizontalAlignment="Center" Width="88" Height="16" VerticalAlignment="Bottom"/>
+        <WrapPanel x:Name="buttons" Grid.Row="2" Grid.ColumnSpan="2" Margin="43,0,41,10" Orientation="Horizontal" Height="49" VerticalAlignment="Bottom" HorizontalAlignment="Center">
+            <Button x:Name="randomButton" Width="52" Height="50" Click="randomButton_Click">
+                <Image x:Name="randomButtonImage" Source="/stop.png" Height="50" Width="52"/>
+            </Button>
+
+            <Button x:Name="prevButton" Width="52" Height="50" Click="prevButton_Click">
+                <Image Source="/left.png"/>
+            </Button>
+
+
+            <Button x:Name="playButton" Width="52" Height="50" Click="playButton_Click">
+                <Image Source="/plau.png" Height="58"/>
+            </Button>
+
+            <Button x:Name="nextButton" Width="52" Height="50" Click="nextButton_Click">
+                <Image Source="/right.png"/>
+            </Button>
+
+            <Button x:Name="repeatButton" Width="52" Height="50" Click="repeatButton_Click">
+                <Image x:Name="repeatButtonImage" Source="/stope.png"/>
+            </Button>
+        </WrapPanel>
+        <Image x:Name="musicImage" Grid.ColumnSpan="2" Margin="48,42,50,73" Grid.RowSpan="2" />
+    </Grid>
+</Window>
